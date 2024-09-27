@@ -2,16 +2,16 @@ import {Server} from "socket.io"
 import Redis from 'ioredis'
 
 const pub=new Redis({
-    host: 'caching-3b1b9c5f-chhabrarishi2001-0b95.h.aivencloud.com',
+    host: '',
     port: 22604,
     username: 'default',
-    password: 'AVNS_iTynHSSCDFFyfqOTQsr',
+    password: '',
 });
 const sub=new Redis({
-    host: 'caching-3b1b9c5f-chhabrarishi2001-0b95.h.aivencloud.com',
+    host: '',
     port: 22604,
     username: 'default',
-    password: 'AVNS_iTynHSSCDFFyfqOTQsr',
+    password: '',
 
 });
 
