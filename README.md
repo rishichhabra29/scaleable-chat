@@ -1,4 +1,7 @@
-                                          Readme for our PUBSUB Architecture
+                                          Readme for our Chat Application Architecture
+
+Readme for PUBSUB Architecture
+
 Table of Contents
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
@@ -49,6 +52,80 @@ messages.
 socket.emit("event:message", { message: "Hello, World!" });
 - Messages published to Redis are automatically broadcast to all connected
 clients.
+
+ Readme for our Multiple Client Server Architecture
+
+
+ Prerequisites
+To run this application, you need:
+● Python 3.x
+● Basic knowledge of networking and socket programming.
+● Required libraries (socket and threading) are part of the standard Python library,
+so no external installations are needed.
+How It Works
+1. Server:
+○ Manages client connections.
+○ Handles incoming messages from each client.
+○ Broadcasts messages to all connected clients.
+○ Allows server-side input to send messages to clients.
+2. Client:
+○ Connects to the server.
+○ Listens for incoming messages.
+○ Allows users to send messages to the server.
+
+Folder Structure
+bash
+Copy code
+.
+├── server.py # Server-side code
+├── client.py # Client-side code
+└── README.md # This README file
+
+How to Run the Application
+Step 1: Start the Server
+1. Open a terminal/command prompt.
+2. Navigate to the folder containing the server.py file.
+Run the server using:
+python server.py
+3. The server will start and wait for incoming client connections. You will see a message
+like:
+
+Server started on localhost:1234
+
+Step 2: Run Multiple Clients
+1. Open a new terminal/command prompt.
+2. Navigate to the folder containing the client.py file.
+Run the client using:
+python client.py
+3. When the client successfully connects, it will display:
+Connected to server
+
+4. You can now start typing messages. Similarly, open more terminals to start additional
+clients and connect them to the server.
+Step 3: Communication
+● Type messages in the client terminal and see them broadcasted to other clients.
+● The server can also send messages to all clients by typing directly into the server
+terminal.
+Step 4: Closing Connections
+● To exit a client, type exit. This will send a disconnection message and close the
+connection.
+● The server will continue running until you terminate it manually (Ctrl + C).
+1.
+
+Code Explanation
+server.py:
+● Sets up a server socket and listens for incoming connections.
+● For each client, a new thread is created using handle_client to manage
+communication.
+● Broadcast functionality sends server messages to all connected clients.
+● Clients are managed in a shared list (clients).
+client.py:
+● Connects to the server and starts a listener thread (receive_messages) to receive
+messages.
+● The main loop allows clients to input messages and send them to the server.
+● The client can gracefully disconnect using the keyword exit.
+
+  
 
 
 
