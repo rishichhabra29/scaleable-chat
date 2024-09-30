@@ -1,11 +1,4 @@
-Readme for PubSub Architecture
-Group no. - 20
-Rishi Chhabra(M24CSE020)
-Nipun Dhokne(M24CSE016)
-Jatin (M24CSE011)
-This project is a real-time messaging system built with Node.js, Socket.IO,
-Redis, and Prisma. It allows users to send and receive messages in real-time,
-leveraging Redis for message brokering and PostgreSQL for data persistence.
+                                          Readme for our PUBSUB Architecture
 Table of Contents
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
@@ -56,6 +49,9 @@ messages.
 socket.emit("event:message", { message: "Hello, World!" });
 - Messages published to Redis are automatically broadcast to all connected
 clients.
+
+
+
 
 
 
