@@ -55,7 +55,6 @@ clients.
 
  Readme for our Multiple Client Server Architecture
 
-
  Prerequisites
 To run this application, you need:
 ● Python 3.x
