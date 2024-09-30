@@ -109,7 +109,7 @@ Step 4: Closing Connections
 ● To exit a client, type exit. This will send a disconnection message and close the
 connection.
 ● The server will continue running until you terminate it manually (Ctrl + C).
-1.
+
 
 Code Explanation
 server.py:
